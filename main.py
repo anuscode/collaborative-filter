@@ -62,10 +62,9 @@ print("user3   0    3.5   0     0     ...  0")
 print("user4   0     0    0     1     ...  5")
 print("\n\n")
 
-# matrix = matrix_p.pivot_table(index="userId", columns="original_title", values="rating")
-# matrix.to_csv("matrix.csv")
 
-matrix = pd.read_csv("matrix.csv")
+# matrix = pd.read_csv("matrix.csv")
+matrix = matrix_p.pivot_table(index="userId", columns="original_title", values="rating")
 
 print("=== CHECK DATA PIVOTED.. ===")
 print(matrix[:5])
@@ -114,6 +113,9 @@ def recommend(input_movie, m, n, similar_genre=True, genre_weight=0.1):
     return result[:n]
 
 
+print("=== CALCULATING RECOMMENDATION.. ===")
 recommend_result = recommend("The Dark Knight", matrix, 5, similar_genre=True, genre_weight=0.1)
 
 print(pd.DataFrame(recommend_result, columns=["title", "correlation", "genres"]))
+
+print("BYE~")
