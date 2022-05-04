@@ -21,3 +21,13 @@
    3. 추천 받고싶은 벡터를 찾고 그 값을 faiss 로 각각 2번 곱함.
    4. 그 값을 피어슨 콜러레이션 방식으로 곱함.
    5. 매우 빠를 것으로 예상 함.
+
+# RESULT
+```text
+             title  ...                                             genres
+0  The Dark Knight  ...                   [Drama, Action, Crime, Thriller]
+1       Prom Night  ...                        [Horror, Mystery, Thriller]
+2   Wild Wild West  ...  [Action, Adventure, Comedy, Science Fiction, W...
+3     Blue Thunder  ...  [Science Fiction, Action, Thriller, Crime, Drama]
+4            Topaz  ...                 [Action, Drama, Mystery, Thriller]
+```
