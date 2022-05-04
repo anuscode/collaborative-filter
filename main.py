@@ -71,7 +71,7 @@ print(matrix[:5])
 print("\n\n")
 
 
-def pearsonR(s1: Series, s2: Series):
+def calculate_pearson_score(s1: Series, s2: Series):
     """피어슨 스코어"""
     s1_c = s1 - s1.mean()  # 미리 계산 및 배열 저장 가능
     s2_c = s2 - s2.mean()  # 미리 계산 및 배열 저장 가능
@@ -92,7 +92,7 @@ def recommend(input_movie, m, n, similar_genre=True, genre_weight=0.1):
     for title in m.columns:
 
         # rating comparison
-        cor = pearsonR(matrix[input_movie], matrix[title])
+        cor = calculate_pearson_score(matrix[input_movie], matrix[title])
 
         if float(cor) <= 0:
             continue
