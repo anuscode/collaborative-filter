@@ -114,7 +114,7 @@ def recommend(input_movie, m, n, similar_genre=True, genre_weight=0.1):
 
 
 print("=== CALCULATING RECOMMENDATION.. ===")
-recommend_result = recommend("The Dark Knight", matrix, 5, similar_genre=True, genre_weight=0.1)
+recommend_result = recommend("Prom Night", matrix, 5, similar_genre=True, genre_weight=0.1)
 
 print(pd.DataFrame(recommend_result, columns=["title", "correlation", "genres"]))
 
