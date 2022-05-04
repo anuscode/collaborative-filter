@@ -1,7 +1,7 @@
 # Collaborative Filtering Engine
 
 # Prerequisites
-1. 본 리뷰는 item based 및 배치 작업을 통해 적절한 데이터를 가져 올 수 있다는 가정 하에 작성 함.
+1. 본 리뷰는 user based 및 배치 작업을 통해 적절한 데이터를 가져 올 수 있다는 가정 하에 작성 함.
 2. 쿼리로 가져와야 할 자료는 matrix 혹은 matrix_p 참조.
    1. 우리 서비스에선 `star_score` 가 아닌 `시청시간`으로 해야 할 듯.
 
